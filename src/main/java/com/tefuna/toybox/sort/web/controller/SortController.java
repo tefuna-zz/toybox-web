@@ -1,5 +1,7 @@
 package com.tefuna.toybox.sort.web.controller;
 
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -10,6 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SortController {
 
-    
-    public 
+    @RequestMapping("/sorta")
+    public String sorta(@RequestParam(value = "name", required = false, defaultValue = "World") String name) {
+        return "sorta";
+    }
 }
